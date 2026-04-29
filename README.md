@@ -71,8 +71,7 @@ Try accessing the `return_value` identifier without prepending `$`.
 **What happens and why?**
 
 <details>
-    <summary>You Answer</summary>
-    ......
+    Without '$' the terminal will simply print 'return_value'
 </details>
 
 ### Task 3: Function-Identifiers
@@ -97,7 +96,9 @@ and pressing `enter`.
 
 <details>
     <summary>Calling a Function</summary>
-    Include a screenshot of your function-call!
+    Unfortunately I do not fully understand the Task. The following Screenshot shows an example call of a function.
+    <img width="1280" height="118" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/cf7a7c8b-8af7-4c22-928e-a02d236a13e5" />
+
 </details>
 
 ### Task 4: Handling Parameters
@@ -263,7 +264,17 @@ These examples demonstrate various fundamental operations in Bash scripting, inc
     <summary>Your Function</summary>
     
 ```bash
-your code
+my_func ()
+{
+    var=$1;
+    mod=$((var % 2));
+    if (( mod == 0 )); then
+        echo "$var is even";
+    else
+        n=$((var + 1));
+        echo "$n is the next even number";
+    fi
+}
 ```
 
 </details>
@@ -301,7 +312,7 @@ cat ./function
 **What happend?**
 <details>
     <summary>Your Explaination</summary>
-    .....
+    The `>` operator overwrites an existing file or creates a new one. `>>` appends data at the end of an existing file. 
 
 </details>
 
@@ -344,7 +355,7 @@ You can use a shorthand within your calls to add this string as a prefix to any 
 **Look at task 6 again. What is the complete filepath of your functions file?**
 <details>
     <summary>Your Answer</summary>
-    ....
+    `/home/KonstantinMoser/functions`
 </details>
 
 All filenames start with a `/`. 
@@ -368,7 +379,10 @@ cd /
 **Run `ls` again and insert the content here:**
 <details>
     <summary>Your Answer</summary>
-    ....
+    bin   home            lib64       opt   sbin  usr
+boot  initrd.img      lost+found  proc  srv   var
+dev   initrd.img.old  media       root  sys   vmlinuz
+etc   lib             mnt         run   tmp   vmlinuz.old
 </details>
 
 Now navigate through your filesystem using `cd` and the name of the directory you want to set as your new `pwd`.
@@ -383,9 +397,15 @@ Use `rm` to delete a file and `rm -rf` to delete a directory.
 **Add a directory into your `~` dir and create an empty file in it. Delete the directory again.**
 <details>
     <summary>Your Terminal Output</summary>
-```bash
-your terminal output
-```
+
+    
+    KonstantinMoser@vorlesung:~$ mkdir ~/test_folder
+
+    
+    KonstantinMoser@vorlesung:~$ touch ~/test_folder/empty_file.txt
+
+    
+    KonstantinMoser@vorlesung:~$ rm -rf ~/test_folder
 </details>
 
 ### Task 10: Managing Software
@@ -439,7 +459,9 @@ When you finished that tutorial, open a file in your home directory and manipula
 **How do you save a buffer to a new filename from within `vim`?**
 <details>
     <summary>Your Answer</summary>
-    .....
+    While in Normal Mode, use the "Write" command followed by the new name. 
+    
+    :w new_filename.txt
 </details>
  
 
